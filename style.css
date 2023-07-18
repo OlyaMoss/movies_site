@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #030303;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+header {
+    background-color: #363636;
+    display: flex;
+}
+.dropD {
+    margin: 1rem;
+    color: whitesmoke;
+}
+.dropD:hover {
+    color: whitesmoke;
+}
+h1{
+    color: whitesmoke;
+    align-self: center;
+    margin-left: 5rem;
+}
+.logo{
+    width: 15rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+    justify-content: center;
+    align-content: center;
+    width: 240px;
+}
+.movie img {
+    width: 100%;
+}
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+}
+.movie-info h3 {
+    margin: 0;
+}
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+}
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+.movie-info span.orange {
+    color: orange;
+}
+.movie-info span.red {
+    color: rgb(189, 42, 42);
+}
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+.overview h3 {
+    margin-top: 0;
+}
+.movie:hover .overview {
+    transform: translateY(0);
+}
+.search {
+    margin: 3rem;
+    margin-left: 12rem;
+    background-color: transparent;
+    border: 2px solid #e9e9ec;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: width 2s;
+}
+
+.modal--show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__card {
+    background-color: #ffffff;
+    max-width: 600px;
+    padding: 16px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    background-color: #1a191f;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__movie-backdrop {
+    width: 200px;
+    margin: 0 auto
+}
+
+.modal__movie-info {
+    margin-left: 20px;
+}
+
+.modal__button-close {
+    padding: 5px;
+    margin: 10px;
+    align-self: center;
+}
+
+.modal__movie-site {
+    color: #ffd80e
+}
+
+ul li {
+    padding: 5px;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
